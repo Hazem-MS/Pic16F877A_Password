@@ -1,7 +1,11 @@
 int Kp,K,M,count,i,sum,x,b,a;
 int Key_Read(void)
 {
+<<<<<<< HEAD
     int ww = 100;
+=======
+    //test github push
+>>>>>>> 51abf4d2ae992d4d4fd2b28961402d57ad6b5488
     Kp = 20;
     portb.F4 = 1;portb.F5 = 0;portb.F6 = 0;
     if(portb.F0 == 1)Kp = 1;
