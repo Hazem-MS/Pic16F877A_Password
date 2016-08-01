@@ -1,4 +1,3 @@
-
 int Kp,K,M,count,i,sum,x,b,a;
 int Key_Read(void)
 {
@@ -82,9 +81,6 @@ S:   Lcd_Cmd(Lcd_Clear);
                 }
 
 
-
-
-
                 if(sum == 0){ b=1;
                               Lcd_Out(2,1,"OPEN");
 
@@ -132,33 +128,3 @@ S:   Lcd_Cmd(Lcd_Clear);
      }
                        
 }
-
-
-
-
-
-
-
-  /*
-  while (1)
-  {
-      //if (portb.f0) delay_ms(500); else delay_ms(100);
-      //if (portb.f1)
-       //{
-        PORTC=PORTC<<1;
-        if (PORTc.F4) PORTC=1;
-       }
-      else
-       {
-        PORTD=PORTD>>1;
-        if (PORTD==0) PORTD=8;
-       }
-  }        */
-
-     
-     
-     
-     
-     
-     
-     
