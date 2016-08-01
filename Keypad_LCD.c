@@ -53,16 +53,13 @@ S:   Lcd_Cmd(Lcd_Clear);
                         
      ////////////////////////////////////////////////////
                             if(K < 10)M = K + 0x30;
-//                            else if(k == 0)M = 0x30;
                             else M = K + 0x37;
                             if(K == 11){
                                  Lcd_Cmd(Lcd_Clear);
                                  goto S;
                                  }
-                            //Lcd_Chr_Cp(M);
                             Lcd_Out_Cp("*");
                             delay_ms(700);
-
 
                 do{
                                     K = Key_Read();
@@ -73,13 +70,11 @@ S:   Lcd_Cmd(Lcd_Clear);
 
                 {
     ////////////// Detection Process /////////////////////
-
                 
                 for(i = 0;i <= 4;i++)
                 {
                   if(sum==0) sum = sum + (Eeprom_Read(i) - Eeprom_Read(i + 5));
                 }
-
 
                 if(sum == 0){ b=1;
                               Lcd_Out(2,1,"OPEN");
@@ -95,20 +90,13 @@ S:   Lcd_Cmd(Lcd_Clear);
                               if (PORTc.F4) PORTC=1;
                               
 
-
-                              //}  while(portc.f7==0);
                               }
                               delay_ms(5000);
-                              //do
-                              //{
                               for(x=1000; x>2; x--)
                               {
                               delay_ms(10);
                               PORTC=PORTC>>1;
                               if (PORTC==0) PORTc=8;
-
-
-                               //}  while(portc.f7==0);
                                }
                                for(a=0;a<5;a++)
                                { Eeprom_Write(a+5,19);
@@ -118,7 +106,6 @@ S:   Lcd_Cmd(Lcd_Clear);
                             }
                 else {
                         Lcd_Out(2,1,"ERORR");
-                        //portc.F6 = 0;
                         b++;
                          delay_ms(500);
                        if(b==4){
