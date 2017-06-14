@@ -1,6 +1,7 @@
 int Kp,K,M,count,i,sum,x,b,a;
 int Key_Read(void)
 {
+    int ww = 100;
     Kp = 20;
     portb.F4 = 1;portb.F5 = 0;portb.F6 = 0;
     if(portb.F0 == 1)Kp = 1;
